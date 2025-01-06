@@ -1,14 +1,9 @@
-from fastapi import FastAPI
 import uvicorn
 
-app = FastAPI()
+from apps.config import settings
+from apps import main
 
-
-@app.get('/')
-def hello_world():
-    return "Hello,uvicorn World"
-
+app = main.create_app(settings)
 
 if __name__ == '__main__':
-    # uvicorn.run(app, port=8080)
     uvicorn.run("app:app", host="0.0.0.0", port=8080, reload=True)
