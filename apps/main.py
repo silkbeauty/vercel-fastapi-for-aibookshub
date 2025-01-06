@@ -32,3 +32,7 @@ def create_app(settings: Settings):
     app.include_router(router)
 
     return app
+
+def create_app1():
+    app = FastAPI()
+    return app

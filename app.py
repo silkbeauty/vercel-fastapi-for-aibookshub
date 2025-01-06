@@ -1,10 +1,13 @@
-from fastapi import FastAPI
+# from fastapi import FastAPI
 import uvicorn
+from apps.main import create_app1
 
-app = FastAPI()
+# app = FastAPI()
+
+app = create_app1()
 
 @app.get('/')
-def _():    return "Hello, settings.uvicorn World"
+def _():    return "Hello, settings.uvicorn World1"
 
 
 if __name__ == '__main__':
