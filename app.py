@@ -6,13 +6,12 @@ from apps.config import settings
 app = FastAPI(
         title=settings.PROJECT_NAME,
         version=settings.VERSION,
-        docs_url="/",
         description=settings.DESCRIPTION,
 )
 
 
-# @app.get('/')
-# def _():    return "Hello,uvicorn Worlddd"
+@app.get('/')
+def _():    return "Hello,uvicorn Worlddd"
 
 
 if __name__ == '__main__':
